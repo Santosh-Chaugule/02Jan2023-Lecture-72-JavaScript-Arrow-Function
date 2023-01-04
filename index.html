@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrow Function</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      //functions are reusable block of code.
+      //Fat Arrow => Notation of declaring function.
+      //Arrow Function.
+      //1 Standalone
+
+      //1.Function Defination
+      function myFunction1(x) {
+        alert("Hello " + x + " from myFunction1");
+      }
+      //Function invocation
+      myFunction1("Santosh");
+
+      //Arrow Function 2015 ES6
+
+      let myFunction2 = (y) => {
+        //formal
+        alert(`Hello ${y} from myFunction2`);
+        //string interpolation./variable substitution.
+      };
+      myFunction2("Yogesh"); //Actual
+    </script>
+
+    <script>
+      //Whwre can be Function Exist?
+      //1. Standalon.
+      //2. JS objcet 2nd member.
+      //3.Inside a class.
+
+      let student1 = {
+        //1.P:V
+        name: "Onkar",
+        surname: "Kadam",
+
+        //2. Methods
+        //2.1 Method Defination
+
+        dispalyFullName() {
+          alert(`Hello ${this.name} ${this.surname} ,How are you?`);
+        },
+        //3.1 Method defination
+
+        display(name = "Shankar") {
+          //Formal Argument with default value
+          alert(`Hello ${name}, Good Morning `);
+        },
+        display2: (name2) => {
+          alert(`Hello ${name2}, Good Evening `);
+        },
+      }; //JS object
+      //Method Calling
+      //Objcet.method();
+      student1.dispalyFullName();
+      student1.display("Shekhar"); //Actual Argument
+      student1.display2("Ramu");
+    </script>
+    <script>
+      //3.Inside a class.
+      let studentName = "Virag";
+
+      class MyClass {
+        //1. Properties/Variables.
+        studentName2 = "Ravi";
+        studentSurname2;
+        //2.Constructor
+        constructor(sname) {
+          this.studentSurname2 = sname;
+        }
+
+        //3.Method
+        myFunction3() {
+          alert(
+            `Hello ${this.studentName2} ${this.studentSurname2}, How are you?`
+          );
+        }
+        //Fat Arrow
+        myFunction4 = () => {};
+      }
+      //   let Object=new ClassNAme
+      let Object2 = new MyClass("Devane");
+      Object2.myFunction3();
+    </script>
+  </body>
+</html>
